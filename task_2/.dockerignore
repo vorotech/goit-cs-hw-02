@@ -1,0 +1,20 @@
+# Ignore common Python files
+*.pyc
+__pycache__/
+
+# Ignore development files
+.env
+.vscode/
+.idea/
+
+# Ignore Docker-related files
+.dockerignore
+Dockerfile
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.swp
+
+# Data folder
+data/
