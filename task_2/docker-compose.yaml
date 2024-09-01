@@ -1,0 +1,19 @@
+version: '3'
+services:
+  app:
+    build: .
+    ports:
+      - 8000:8000
+    depends_on:
+      - db
+    environment:
+      - SQLALCHEMY_DATABASE_URL=postgresql://postgres:567234@db:5432/hw02
+  db:
+    image: postgres
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=567234
+      - POSTGRES_DB=hw02
+      - POSTGRES_PORT=5432
+    volumes:
+      - ./data:/var/lib/postgresql/data
